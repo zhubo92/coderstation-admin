@@ -2,7 +2,7 @@ import AdminController from './services/admin';
 import { message } from 'antd';
 
 export async function getInitialState() {
-  if (location.pathname === '/login') {
+  if (location.hash === '#/login') {
     // 说明是要强行跳登录页
     // 判断是否有有效的 token
     const token = localStorage.getItem('adminToken'); // 获取本地 token
@@ -31,7 +31,8 @@ export async function getInitialState() {
       // token 验证失效，跳转至登录
       // 失效可能是 token 过期，也有可能是本地就没有 token，不管有没有，删除掉
       localStorage.removeItem('adminToken');
-      location.href = '/login';
+      // location.href = '/login';
+      location.hash = '#/login'
       message.warning('登录过期，请重新登录');
     }
   }

@@ -1,17 +1,21 @@
 import { defineConfig } from '@umijs/max';
 
 export default defineConfig({
+  publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
   antd: {},
   access: {},
   model: {},
   initialState: {},
   request: {},
   layout: {
-    title: 'coderstation',
+    title: 'coderstation-admin',
     pure: true,
     loading: true,
   },
   dva: {},
+  history: {
+    type: "hash"
+  },
   routes: [
     {
       path: '/',

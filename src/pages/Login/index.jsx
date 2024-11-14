@@ -7,8 +7,10 @@ import ReactCanvasNest from 'react-canvas-nest';
 import AdminController from '@/services/admin';
 
 import styles from './index.module.css';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
+  const navigate = useNavigate();
   const [captcha, setCaptcha] = useState(null);
   const [loginInfo, setLoginInfo] = useState({
     loginId: '',
@@ -42,7 +44,8 @@ function Login() {
         // 存储 token
         localStorage.setItem('adminToken', adminInfo.token);
         // 跳转到后台管理系统首页
-        location.href = '/';
+        // location.href = '/';
+        navigate('/');
       }
     } else {
       // 显示服务器返回的错误信息
