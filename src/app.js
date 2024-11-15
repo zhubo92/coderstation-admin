@@ -40,13 +40,13 @@ export async function getInitialState() {
 
 export const layout = () => {
   return {
-    logo: '/favicon.ico',
+    logo: './favicon.ico',
     menu: {
       locale: false,
     },
     logout: () => {
       localStorage.removeItem('adminToken');
-      location.href = '/login';
+      location.hash = '#/login';
       message.success('退出登录成功');
     },
   };
