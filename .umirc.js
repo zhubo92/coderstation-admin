@@ -1,8 +1,7 @@
 import { defineConfig } from '@umijs/max';
 
 export default defineConfig({
-  publicPath: process.env.NODE_ENV === 'production' ? '/admin/' : '/',
-  base: process.env.NODE_ENV === 'production' ? '/admin/' : '',
+  publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
   antd: {},
   access: {},
   model: {},
@@ -15,7 +14,7 @@ export default defineConfig({
   },
   dva: {},
   history: {
-    type: "browser",
+    type: "hash",
   },
   routes: [
     {
