@@ -40,7 +40,7 @@ export async function getInitialState() {
 
 export const layout = () => {
   return {
-    logo: './favicon.ico',
+    logo: '/favicon.ico',
     menu: {
       locale: false,
     },
