@@ -71,7 +71,7 @@ export function formatDate(timestamp) {
 
 /**
  * 批量创建下拉列表的 option
- * @param {*} Option 要创建的 Option 组件
+ * @param {*} Select 要创建的 Option 组件
  * @param {*} typeList 类别集合
  * @returns
  */
